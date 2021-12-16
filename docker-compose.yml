@@ -15,11 +15,11 @@ services:
       - ./public:/srv/public
       - ./migrations:/srv/migrations
     env_file:
-      - .env
+      - config.env
     restart: unless-stopped
     environment:
-      - BINANCE_MODE=test
-      # - BINANCE_MODE=live
+      #- BINANCE_MODE=test
+      - BINANCE_MODE=live
       - BINANCE_REDIS_HOST=binance-redis
       - BINANCE_REDIS_PORT=6379
       - BINANCE_REDIS_PASSWORD=secretp422
